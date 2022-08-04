@@ -96,7 +96,11 @@ DATABASES = {
 DATABASES = {
       'default': {
           'ENGINE': 'djongo',
-          'NAME': 'pauc',
+          'CLIENT':{
+            "host": "mongodb+srv://Parth:2FaWL4Xufd1zm8F7@cluster0.dfmtm.mongodb.net/?retryWrites=true&w=majority",
+            "name":"pauc",
+            "authMechanism":"SCRAM-SHA-1"
+          }
       }
   }
 AUTH_USER_MODEL = 'auction.User'

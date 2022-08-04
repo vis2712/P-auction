@@ -5,11 +5,11 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 
 class User(AbstractUser):
-    city = models.CharField(max_length=100, default='')
-    state = models.CharField(max_length=100, default='')
-    country = models.CharField(max_length=100,default='India')
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
     phone = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='Profile/', blank=True)
+    image = models.ImageField(upload_to='Profile/')
 
     def __str__(self):
         return f"{self.username}"
