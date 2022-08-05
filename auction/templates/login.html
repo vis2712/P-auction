@@ -12,6 +12,13 @@
 				<form action="{% url 'login' %}" method="POST">
 					{% csrf_token %}
 					<div class="">
+						<p class="text-head">Select User type</p>
+						<select name="usertype" id="usertype" class="input">
+							<option value="bidder" class="input">Bidder</option>
+							<option value="seller" class="input">Seller</option>
+						  </select>
+					</div>
+					<div class="">
 						<p class="text-head">Email Id</p>
 						<input type="text" name="username" placeholder="Please Enter Email Id.." class="input" />
 					</div>
